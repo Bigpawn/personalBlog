@@ -39,7 +39,8 @@ jobs:
         run: |
           pnpm run docs:build
           touch .nojekyll
+          ls -l .vitePress/dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: /.vitePress/dist
+          path: .vitePress/dist
